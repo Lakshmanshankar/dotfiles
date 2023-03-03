@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Open Google Chrome in the b
+google-chrome &
+
+# Open Nautilus in the backgr
+nautilus &
+
+# Open btop in the foreground
+x-terminal-emulator &
+
+gnome-disks &
+
+gnome-calculator &
+
+# Open Tmux in a new session
+tmux new-session -s mysession
