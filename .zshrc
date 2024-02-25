@@ -1,27 +1,18 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="powerlevel10k/powerlevel10k"
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /home/lakshman/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /home/lakshmanshankar/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # starship conf
 
  # ZSH_THEME="starship"
-
- # export PATH=$PATH:/snap/bin
- # eval "$(starship init zsh)"
- # STARSHIP_CONFIG=~/.config/starship.toml
  #
 
 # Set name of the theme to load --- if set to "random", it will
@@ -89,12 +80,13 @@ HYPHEN_INSENSITIVE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-
-plugins=(git colored-man-pages)
+plugins=(
+  git
+  colored-man-pages
+  zsh-autosuggestions
+)
 
 # Set the prompt style with a space
-POWERLEVEL9K_PROMPT_ON=always
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=" "
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -121,58 +113,9 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh" 
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-## User aliases
-alias c="clear"
-alias e="exit"
-alias vi="nvim"
-# alias arrange="python3 /home/lakshman/scripts/fileorganise.py"
-alias ls="lsd"
-alias cat="bat"
-alias vid="/home/lakshman/.local/bin/neovide"
-
-alias lg="lazygit"
-alias ld="lazydocker"
-
-alias pn="pkill nvim"
-# alias pre="sh ~/scripts/pyrun.sh"
-alias cr="cargo run"
-alias dr="deno run"
-alias mate="tldr"
-alias cg="git clone"
-alias pidof="sudo lsof -t -i:3000"
-alias vic="vi ." # this can also be something like nvim . because i aliased vi = nvim so  get the point
-alias n="vi ." # this can also be something like nvim . because i aliased vi = nvim so  get the point
-alias ef="fd --type f --hidden --exclude .git | fzf-tmux | xargs nvim"
-alias pdv="fd --type f --hidden --exclude .pdf | fzf-tmux | xargs evince"
-
-
-# load my scripts folder here
-export PATH="$HOME/scripts:$PATH"
-
-# Deno stuff
-export DENO_INSTALL="/home/lakshman/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
-export PATH="/home/lakshman/.local/kitty.app/bin:$PATH"
-fpath=(~/.zsh $fpath)
-autoload -Uz compinit
-compinit -u
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-# bun completions
-[ -s "/home/lakshman/.bun/_bun" ] && source "/home/lakshman/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-export MAVEN_HOME=/opt/apache-maven-3.6.3/bin
-export MAVEN_HOME=/opt/apache-maven-3.6.3/bin  export PATH=${MAVEN_HOME}:${PATH}
-
-neofetch
-export GRADLE_HOME=/opt/gradle/gradle-7.4.2                                                                                                                        
-
-export PATH=${GRADLE_HOME}/bin:${PATH}^
-
-
+# Source custom aliases
+source "$HOME/.zshrc.d/.aliases.zsh"
+# Source custom sources
+source "$HOME/.zshrc.d/.sources.zsh"

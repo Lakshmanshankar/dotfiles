@@ -14,3 +14,6 @@ vim.api.nvim_set_keymap("n", "<leader>ii", ":IconPickerYank<CR>", { silent = tru
 vim.g.copilot_no_tab_map = true
 vim.api.nvim_set_keymap("i", "<C-j>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 vim.api.nvim_set_keymap("i", "<C-k>", "codeium#Accept()", { silent = true, expr = true })
+
+
+vim.api.nvim_set_keymap('n', '<leader>sl', [[<cmd>lua require('telescope.builtin').find_files({search_dirs = {'~/.home_make'}, prompt_title = "Home Links"})<CR>]], { noremap = true, silent = true })
