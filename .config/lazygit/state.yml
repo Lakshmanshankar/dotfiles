@@ -1,0 +1,12 @@
+lastupdatecheck: 0
+recentrepos:
+- /home
+startuppopupversion: 5
+customcommandshistory:
+- ""
+- q
+- exit
+- bash -c exit
+- Q
+hidecommandlog: false
+ignorewhitespaceindiffview: true
