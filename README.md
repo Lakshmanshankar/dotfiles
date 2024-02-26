@@ -55,6 +55,11 @@ sudo apt install tmux
 ```
 sudo dnf install tmux
 ```
+Tmux plugin Manager
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+then prefix + shift I
 
 
 ## Other tools
