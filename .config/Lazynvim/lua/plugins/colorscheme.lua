@@ -12,6 +12,8 @@ return {
       },
     },
   },
+
+  { "rebelot/kanagawa.nvim" },
   -- rose-pine
   { "rose-pine/neovim", name = "rose-pine" },
   -- one-dark
@@ -19,7 +21,6 @@ return {
     "olimorris/onedarkpro.nvim",
     priority = 1000, -- Ensure it loads first
   },
-
   -- Configure LazyVim to load gruvbox 
   { "ellisonleao/gruvbox.nvim" },
 

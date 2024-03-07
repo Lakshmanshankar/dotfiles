@@ -20,15 +20,25 @@ return {
   },
 
   {
-    "rmagatti/auto-session",
-    config = function()
-      require("auto-session").setup({
-        log_level = "error",
-        auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
-      })
-    end,
+    "ThePrimeagen/harpoon",
+    -- opts = {
+    --   keys = {
+    --     { "<leader>hh", "<cmd>:Telescope harpoon marks <CR>", desc = "Harpoon Marks" },
+    --     { "<leader>cR", "<cmd>TypescriptRenameFile<CR>", desc = "Rename File" },
+    --   },
+    -- },
   },
-
+  --
+  -- {
+  --   "rmagatti/auto-session",
+  --   config = function()
+  --     require("auto-session").setup({
+  --       log_level = "error",
+  --       auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/" },
+  --     })
+  --   end,
+  -- },
+  --
   {
     "ThePrimeagen/refactoring.nvim",
     dependencies = {
