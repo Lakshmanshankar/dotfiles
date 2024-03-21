@@ -14,45 +14,10 @@ vim.api.nvim_set_keymap("i", "<C-k>", "codeium#Accept()", { silent = true, expr 
 
 -- Create a key mapping for the copy_and_write function
 vim.api.nvim_set_keymap("n", "<C-c>", "<cmd>%y+<CR>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("i", "jk", "Esc", { silent = true, expr = true })
 
--- Harpoon
+vim.api.nvim_set_keymap("n", "<leader> ct", "TextCaseOpenTelescopeLSPChange", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz<CR>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz<CR>", { silent = true, noremap = true })
 
-local function add_file()
-  vim.cmd(":lua require('harpoon.mark').add_file()")
-end
-
-local function show_harpoon()
-  vim.cmd(":lua require('harpoon.ui').toggle_quick_menu()")
-end
-
-local function show_harpoon()
-  vim.cmd(":lua require('harpoon.ui').nav_next()")
-end
-
-local function show_harpoon()
-  vim.cmd(":lua require('harpoon.ui').nav_prev()")
-end
--- Add the keymap for adding a file
-vim.api.nvim_set_keymap(
-  "n",
-  "<leader>ha",
-  ':lua require("harpoon.mark").add_file()<CR>',
-  { noremap = true, silent = true }
-)
-
--- Add the keymap for showing the harpoon menus
-vim.api.nvim_set_keymap(
-  "n",
-  "<leader>hd",
-  ':lua require("harpoon.ui").toggle_quick_menu()<CR>',
-  { noremap = true, silent = true }
-)
-
-vim.api.nvim_set_keymap("n", "<leader>hh", ":Telescope harpoon marks<CR>", { noremap = true, silent = true })
--- Add the keymap for showing the harpoon menus
-vim.api.nvim_set_keymap(
-  "n",
-  "<leader>hn",
-  ':lua require("harpoon.ui").nav_next()<CR>',
-  { noremap = true, silent = true }
-)
+vim.api.nvim_set_keymap("n", "n", "nzzzz<CR>", { silent = true, noremap = true })
