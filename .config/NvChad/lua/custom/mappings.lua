@@ -24,6 +24,16 @@ M.copilot = {
 	},
 }
 
+M.move_files = {
+	n = {
+		["<leader>bd"] = {
+			function()
+				require("nvchad.tabufline").close_buffer()
+			end,
+		},
+	},
+}
+
 M.dap = {
 	plugin = true,
 	n = {
@@ -36,11 +46,29 @@ M.dap = {
 	},
 }
 
+M.cases = {
+	n = {
+		["<leader>ci"] = { "<cmd> TextCaseOpenTelescopeLSPChange <CR>" },
+		["<A-j>"] = { "<cmd> m .+1 <CR>" },
+		["<A-k>"] = { "<cmd> m .-2 <CR>" },
+	},
+	i = {
+		["<A-j>"] = { "<esc><cmd>m .+1<cr>==gi <CR>" },
+		["<A-k>"] = { "<esc><cmd>m .-2<cr>==gi <CR>" },
+	},
+	v = {
+		["<A-j>"] = { "<cmd> m '>+1<cr>gv=gv <CR>" },
+		["<A-k>"] = { "<cmd> m '<-2<cr>gv=gv<CR>" },
+	},
+}
+
 M.utils = {
 	n = {
 		["<C-c>"] = { "<cmd> %y+ <CR>", "Copy whole file" },
+		["<leader>ww"] = { "<cmd> set wrap!<CR>", "disable word wrap" },
+		["<leader>wv"] = { "<cmd> set wrap!<CR>", "enable word wrap" },
 		["<leader>gg"] = { "<cmd> LazyGit <CR>", "lazygit current " },
-		["<leader>ii"] = { "<cmd> IconPickerYank <CR>", "Icon Picker " },
+		-- ["<leader>ii"] = { "<cmd> IconPickerYank <CR>", "Icon Picker " },
 	},
 }
 
@@ -57,12 +85,18 @@ M.lspconfig = {
 	},
 }
 
--- Your custom mappings
+M.move_files = {
+	i = {
+		["<C-j"] = { "<cmd>m .+1<CR>", "move line up" },
+	},
+}
+
 M.telescope = {
 	n = {
 		["<C-n>"] = { "<cmd> Telescope <CR>", "Telescope" },
 		["<leader><leader>"] = { "<cmd> Telescope find_files <CR>", "Find files" },
 		["<leader>|"] = { "<cmd> vsp <CR>", " Vertical split" },
+		["<leader>/"] = { "<cmd> Telescope live_grep <CR>", " Horizontal split" },
 		["<leader>_"] = { "<cmd> sp <CR>", " Horizontal split" },
 		["<leader>e"] = { "<cmd> NvimTreeToggle<CR>", "Toggle NvimTree" },
 		-- ["<C-s>"] = { ":Telescope Files <CR>", "Telescope Files" },
