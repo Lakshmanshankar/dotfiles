@@ -1,6 +1,8 @@
 lastupdatecheck: 0
 recentrepos:
-- /home
+- /home/lakshman/resolver/dotfiles
+- /home/lakshman/dotfiles
+- /home/lakshman/Projects/DSA
 startuppopupversion: 5
 customcommandshistory:
 - ""
@@ -9,4 +11,3 @@ customcommandshistory:
 - bash -c exit
 - Q
 hidecommandlog: false
-ignorewhitespaceindiffview: true

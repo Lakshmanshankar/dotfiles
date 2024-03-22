@@ -8,7 +8,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 # source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /home/lakshmanshankar/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source "$HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # starship conf
 

@@ -1,6 +1,6 @@
 [user]
-	email = xxx@gmail.com
-	name = xxx
+	email = lakshmanshankarc@gmail.com
+	name = Lakshmanshankar
 [core]
     pager = delta
 
@@ -16,5 +16,4 @@
 
 [diff]
     colorMoved = default
-
 
