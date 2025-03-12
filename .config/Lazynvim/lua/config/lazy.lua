@@ -15,11 +15,14 @@ require("lazy").setup {
 		{ import = "lazyvim.plugins.extras.lang.json" },
 		{ import = "lazyvim.plugins.extras.lang.typescript" },
 		{ import = "lazyvim.plugins.extras.linting.eslint" },
+		{ import = "lazyvim.plugins.extras.editor.aerial" },
 		-- { import = "lazyvim.plugins.extras.formating.prettier" },
+		-- { import = "lazyvim.plugins.extras.lang.python" },
 		{ import = "lazyvim.plugins.extras.lang.tailwind" },
 		-- { import = "lazyvim.plugins.extras.lang.python" },
 
 		-- { import = "lazyvim.plugins.extras.lsp.none-ls" },
+		-- azyvim.plugins.extras.lsp.none-ls
 		-- { import = "lazyvim.plugins.extras.ui.mini-animate" },
 		-- import/override with your plugins
 		{ import = "plugins" } --[[ , ]],

@@ -1,9 +1,9 @@
 [user]
-	email = xxx
-	name = xxx
+	email = lakshmanshankarc@gmail.com
+	name = Lakshmanshankar
 [core]
     pager = delta
-	editor = vim
+	editor = nvim
 
 [interactive]
     diffFilter = delta --color-only
@@ -18,3 +18,8 @@
 [diff]
     colorMoved = default
 
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

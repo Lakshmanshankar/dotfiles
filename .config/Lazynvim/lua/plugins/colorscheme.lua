@@ -42,17 +42,53 @@ return {
 		},
 	},
 
-	{ "rebelot/kanagawa.nvim" },
+	{
+		"rebelot/kanagawa.nvim",
+		opt = {
+			transparent = true,
+			styles = {
+				sidebars = "transparent",
+				float = "transparent",
+			},
+		},
+	},
+
 	-- rose-pine
-	{ "rose-pine/neovim", name = "rose-pine" },
+	{
+		"rose-pine/neovim",
+		name = "rose-pine",
+
+		opts = {
+			transparent = true,
+			styles = {
+				sidebars = "transparent",
+				floats = "transparent",
+			},
+		},
+	},
 	-- one-dark
 	{
 		"olimorris/onedarkpro.nvim",
 		priority = 1000, -- Ensure it loads first
+		opt = {
+			transparent = true,
+			styles = {
+				sidebars = "transparent",
+				floats = "transparent",
+			},
+		},
 	},
 	-- Configure LazyVim to load gruvbox 
-	{ "ellisonleao/gruvbox.nvim" },
-
+	{
+		"ellison/gruvbox.nvim",
+		opt = {
+			transparent = true,
+			styles = {
+				sidebars = "transparent",
+				float = "transparent",
+			},
+		},
+	},
 	{ "Mofiqul/vscode.nvim" },
 	-- Configure LazyVim to load gruvbox
 	{
@@ -66,9 +102,20 @@ return {
 	},
 
 	{
+		"tokyonight.nvim",
+		opts = {
+			transparent = false,
+			styles = {
+				sidebars = "transparent",
+				floats = "transparent",
+			},
+		},
+	},
+	{
 		"LazyVim/LazyVim",
 		opts = {
 			colorscheme = "tokyonight-night",
+			-- colorscheme = "onedark",
 			-- colorscheme = "catppuccin-mocha",
 		},
 	},

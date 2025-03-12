@@ -82,7 +82,6 @@ HYPHEN_INSENSITIVE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  colored-man-pages
   zsh-autosuggestions
 )
 
@@ -119,3 +118,13 @@ source $ZSH/oh-my-zsh.sh
 source "$HOME/.zshrc.d/.aliases.zsh"
 # Source custom sources
 source "$HOME/.zshrc.d/.sources.zsh"
+source "$HOME/.zshrc.d/.funcs.zsh"
+# source "$HOME/.zshrc.d/scripts.zsh"
+# source "$HOME/.zshrc.d/fzf-completions.zsh"
+# source "$HOME/.zshrc.d/fzf-bindings.zsh"
+
+# Turso
+export PATH="$PATH:/home/codevantage/.turso"
+
+# bun completions
+[ -s "/home/codevantage/.bun/_bun" ] && source "/home/codevantage/.bun/_bun"

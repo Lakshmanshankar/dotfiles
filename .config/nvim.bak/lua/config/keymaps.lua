@@ -1,16 +1,18 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
+--
+
+vim.api.nvim_set_keymap(
+  "n",
+  "<leader>sl",
+  [[<cmd>lua require('telescope.builtin').find_files({search_dirs = {'~/.home_make'}, prompt_title = "Home Links"})<CR>]],
+  { noremap = true, silent = true }
+)
 
 vim.api.nvim_set_keymap("n", "<leader>t", ":ToggleTerm<CR>", { silent = true })
-vim.api.nvim_set_keymap("n", "<leader>i", ":IconPickerYank<CR>", { silent = true })
+vim.api.nvim_set_keymap("n", "<leader>ii", ":IconPickerYank<CR>", { silent = true })
 vim.api.nvim_set_keymap("n", "<leader>bd", ":BufferLineCloseOthers<CR>", { silent = true })
-vim.api.nvim_set_keymap(
-	"n",
-	"<leader>sf",
-	":lua require('telescope').extensions.aerial.aerial()<CR>",
-	{ silent = true }
-)
 
 -- vim.api.nvim_set_keymap("n", "<leader>r", ":Telescope oldfiles<CR>", { silent = true })
 
@@ -23,7 +25,8 @@ vim.api.nvim_set_keymap("n", "<C-c>", "<cmd>%y+<CR>", { silent = true, noremap =
 vim.api.nvim_set_keymap("i", "jk", "Esc", { silent = true, expr = true })
 
 vim.api.nvim_set_keymap("n", "<leader> ct", "TextCaseOpenTelescopeLSPChange", { silent = true, noremap = true })
--- vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz<CR>", { silent = true, noremap = true })
--- vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz<CR>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz<CR>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz<CR>", { silent = true, noremap = true })
 
--- vim.api.nvim_set_keymap("n", "n", "nzzzz<CR>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "n", "nzzzz<CR>", { silent = true, noremap = true })
+

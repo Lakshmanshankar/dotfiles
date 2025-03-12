@@ -1,5 +1,5 @@
 return {
-  { "Exafunction/codeium.vim" }, -- codeium
+  -- { "Exafunction/codeium.vim" }, -- codeium
   {
     "github/copilot.vim",
   },
