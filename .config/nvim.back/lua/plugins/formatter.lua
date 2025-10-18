@@ -8,7 +8,7 @@ return {
     {
       "<leader>cF",
       function()
-        require("conform").format { formatters = { "injected" } }
+        require("conform").format({ formatters = { "injected" } })
       end,
       mode = { "n", "v" },
       desc = "Format Injected Langs",
@@ -18,11 +18,12 @@ return {
   opts = {
     formatters_by_ft = {
       lua = { "stylua" },
+      fish = { "fish_indent" },
       sh = { "shfmt" },
-      typescriptreact = { "biome" },
-      javascriptreact = { "biome" },
-      javascript = { "biome" },
-      typescript = { "biome" },
+      typescriptreact = { "prettierd" },
+      javascriptreact = { "prettierd" },
+      javascript = { "prettierd" },
+      typescript = { "prettierd" },
       css = { "prettierd" },
       html = { "prettierd" },
       json = { "prettierd" },

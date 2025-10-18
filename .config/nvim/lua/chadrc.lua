@@ -1,17 +1,17 @@
--- This file  needs to have same structure as nvconfig.lua
--- https://github.com/NvChad/NvChad/blob/v2.5/lua/nvconfig.lua
+-- This file needs to have same structure as nvconfig.lua
+-- https://github.com/NvChad/ui/blob/v3.0/lua/nvconfig.lua
+-- Please read that file to know all available options :(
 
 ---@type ChadrcConfig
 local M = {}
 
-M.ui = {
-  theme = "rosepine",
+M.base46 = {
+  theme = "catppuccin",
   statusline = {
-    theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
-    separator_style = "default",
+    theme = "default", -- default/vscode/vscode_colored/minimal
+    separator_style = "block",
     overriden_modules = nil,
   },
-  theme_toggle = { "onedark", "monochrome" },
   transparency = true,
   hl_override = {
     Comment = { italic = true },
@@ -21,5 +21,12 @@ M.ui = {
     },
   },
 }
+
+-- M.nvdash = { load_on_startup = true }
+-- M.ui = {
+--       tabufline = {
+--          lazyload = false
+--      }
+-- }
 
 return M

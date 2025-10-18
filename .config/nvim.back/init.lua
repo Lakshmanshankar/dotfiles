@@ -1,10 +1,10 @@
-vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
+vim.g.base46_cache = vim.fn.stdpath "data" .. "/nvchad/base46/"
 vim.g.mapleader = " "
 
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
-if not vim.uv.fs_stat(lazypath) then
+if not vim.loop.fs_stat(lazypath) then
   local repo = "https://github.com/folke/lazy.nvim.git"
   vim.fn.system { "git", "clone", "--filter=blob:none", repo, "--branch=stable", lazypath }
 end
@@ -20,8 +20,10 @@ require("lazy").setup({
     lazy = false,
     branch = "v2.5",
     import = "nvchad.plugins",
+    config = function()
+      require "options"
+    end,
   },
-
   { import = "plugins" },
 }, lazy_config)
 
@@ -29,29 +31,23 @@ require("lazy").setup({
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
 
-require "options"
-require "autocmds"
+require "nvchad.autocmds"
 
 vim.schedule(function()
   require "mappings"
 end)
 
+
 vim.api.nvim_set_hl(0, "TelescopeBorder", { fg = "#393552" })
 
+
 local vim = vim
--- local opt = vim.opt
+local opt = vim.opt
 
--- opt.foldmethod = "expr"
--- opt.foldlevel = 99
--- opt.foldexpr = "nvim_treesitter#foldexpr()"
--- -- vim.opt.tabstop = 4
--- -- vim.opt.shiftwidth = 4
--- -- vim.opt.softtabstop = 4
--- vim.opt.wrap = false
-
--- vim.o.fillchars = 'eob: ,fold: ,foldopen:,foldsep: ,foldinner: ,foldclose:'
---
-vim.opt.fillchars = { fold = " " }
-vim.opt.foldmethod = "indent"
-vim.opt.foldenable = false
-vim.opt.foldlevel = 99
+opt.foldmethod = "expr"
+opt.foldlevel = 99
+opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.tabstop = 4 -- Number of spaces tabs count for
+vim.opt.shiftwidth = 4 -- Number of spaces to use for auto-indent
+vim.opt.softtabstop = 4 -- Number of spaces to use when editing
+vim.opt.wrap = false -- HATE this is not default

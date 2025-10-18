@@ -8,7 +8,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 # source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source "$HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+# source "$HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # starship conf
 
@@ -128,3 +128,4 @@ export PATH="$PATH:/home/codevantage/.turso"
 
 # bun completions
 [ -s "/home/codevantage/.bun/_bun" ] && source "/home/codevantage/.bun/_bun"
+export PATH=$PATH:/usr/local/go/bin

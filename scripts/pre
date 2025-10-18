@@ -1,3 +1,0 @@
-cd ~/Desktop/programs/runtime
-nvim main.py
-gnome-terminal .

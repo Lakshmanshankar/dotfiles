@@ -34,6 +34,13 @@ return {
             { "<leader>sr", function() require("spectre").open() end, desc = "Replace in files (Spectre)" },
         },
   },
+  -- Liveserver
+  {
+    "barrett-ruth/live-server.nvim",
+    build = "pnpm add -g live-server",
+    cmd = { "LiveServerStart", "LiveServerStop" },
+    config = true,
+  },
   {
     "theprimeagen/harpoon",
     branch = "harpoon2",
@@ -97,7 +104,7 @@ return {
       },
     },
   },
-  -- Refactoring plugin
+  -- REFACTORIING
   {
     "ThePrimeagen/refactoring.nvim",
     cmd = { "Refactor" },
@@ -110,19 +117,19 @@ return {
     end,
   },
 
-  -- Lazygit rarely use so but good one. 
-  -- {
-  --   "kdheepak/lazygit.nvim",
-  --   dependencies = {
-  --     "nvim-telescope/telescope.nvim",
-  --     "nvim-lua/plenary.nvim",
-  --   },
-  --   cmd = { "LazyGit" },
-  --   keys = { { "<leader>gg", "<cmd>LazyGit<cr>", desc = "LazyGit" } },
-  --   config = function()
-  --     require("telescope").load_extension "lazygit"
-  --   end,
-  -- },
+  -- LAZYGIT
+  {
+    "kdheepak/lazygit.nvim",
+    dependencies = {
+      "nvim-telescope/telescope.nvim",
+      "nvim-lua/plenary.nvim",
+    },
+    cmd = { "LazyGit" },
+    keys = { { "<leader>gg", "<cmd>LazyGit<cr>", desc = "LazyGit" } },
+    config = function()
+      require("telescope").load_extension "lazygit"
+    end,
+  },
 
   {
     "windwp/nvim-ts-autotag",
@@ -132,7 +139,7 @@ return {
     end,
   },
 
-  { 
+  { -- Setup Dressing nvim before
   	"ziontee113/icon-picker.nvim",
   	cmd = { "IconPickerYank", "IconPickerNormal", "IconPickerInsert" },
   	config = function()
@@ -141,7 +148,8 @@ return {
   		local opts = { noremap = true, silent = true }
 
   		vim.keymap.set("n", "<leader>ki", "<cmd>IconPickerNormal<cr>", opts)
-  		vim.keymap.set("n", "<leader><leader>y", "<cmd>IconPickerYank<cr>", opts) 
-    end,
+  		vim.keymap.set("n", "<leader><leader>y", "<cmd>IconPickerYank<cr>", opts) --> Yank the selected icon into register
+  		-- vim.keymap.set("i", "<C-i>", "<cmd>IconPickerInsert<cr>", opts)
+  	end,
   },
 }

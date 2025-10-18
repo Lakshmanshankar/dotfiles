@@ -3,17 +3,15 @@ local options = {
     lua = { "stylua" },
     css = { "prettier" },
     html = { "prettier" },
-    typescript = { "prettier" },
-    python={"black"},
-    json={"prettier"},
-    typescriptreact = { "prettier" },
+    typescript = { "biome" },
+    json={"biome"},
+    typescriptreact = { "biome" },
   },
 
   format_on_save = {
-    -- These options will be passed to conform.format()
     timeout_ms = 500,
     lsp_fallback = true,
   },
 }
 
-require("conform").setup(options)
+return options
