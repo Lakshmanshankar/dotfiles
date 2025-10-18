@@ -5,8 +5,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
 # source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # source "$HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
@@ -31,7 +29,6 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
-HYPHEN_INSENSITIVE="true"
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
@@ -80,13 +77,15 @@ HYPHEN_INSENSITIVE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-  zsh-autosuggestions
-)
 
 # Set the prompt style with a space
-source $ZSH/oh-my-zsh.sh
+# Load oh my zsh first
+source "$HOME/.zshrc.d/.ohMyZsh.zsh"
+
+
+source "$HOME/.zshrc.d/.aliases.zsh"
+source "$HOME/.zshrc.d/.sources.zsh"
+source "$HOME/.zshrc.d/.funcs.zsh"
 
 # User configuration
 
@@ -115,17 +114,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Source custom aliases
-source "$HOME/.zshrc.d/.aliases.zsh"
-# Source custom sources
-source "$HOME/.zshrc.d/.sources.zsh"
-source "$HOME/.zshrc.d/.funcs.zsh"
-# source "$HOME/.zshrc.d/scripts.zsh"
-# source "$HOME/.zshrc.d/fzf-completions.zsh"
-# source "$HOME/.zshrc.d/fzf-bindings.zsh"
 
-# Turso
-export PATH="$PATH:/home/codevantage/.turso"
-
-# bun completions
-[ -s "/home/codevantage/.bun/_bun" ] && source "/home/codevantage/.bun/_bun"
-export PATH=$PATH:/usr/local/go/bin
