@@ -27,15 +27,15 @@ vim.o.hlsearch = false
 vim.wo.number = true
 
 -- Relative Number
-vim.opt.relativenumber = false
+vim.opt.relativenumber = true
 
 -- Enable mouse mode
-vim.o.mouse = 'a'
+vim.o.mouse = "a"
 
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
-vim.o.clipboard = 'unnamedplus'
+vim.o.clipboard = "unnamedplus"
 
 -- Enable break indent
 vim.o.breakindent = true
@@ -56,11 +56,11 @@ vim.o.smartcase = true
 -- vim.opt.timeoutlen = 300
 
 -- Set colorcolumn
-vim.opt.colorcolumn = '100'
+vim.opt.colorcolumn = "100"
 vim.opt.textwidth = 100
 
 -- Set completeopt to have a better completion experience
-vim.opt.completeopt = 'menuone,noselect'
+vim.opt.completeopt = "menuone,noselect"
 
 -- NOTE: You should make sure your terminal supports this
 vim.opt.termguicolors = true
@@ -77,15 +77,15 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 
 -- Enables and configures undofile
-vim.opt.undodir = os.getenv('HOME') .. '/.vim/undodir'
+vim.opt.undodir = os.getenv "HOME" .. "/.vim/undodir"
 vim.opt.undofile = true
 
 -- this needs to be set here (not in keymaps) otherwise we can't use our <leader> key
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 
 -- adding mdx support (mostly for astro)
-vim.filetype.add({
+vim.filetype.add {
   extension = {
-    mdx = 'markdown.mdx',
+    mdx = "markdown.mdx",
   },
-})
+}

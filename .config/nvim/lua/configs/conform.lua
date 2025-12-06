@@ -4,7 +4,7 @@ local options = {
     css = { "prettier" },
     html = { "prettier" },
     typescript = { "biome" },
-    json={"biome"},
+    json = { "biome" },
     typescriptreact = { "biome" },
   },
 

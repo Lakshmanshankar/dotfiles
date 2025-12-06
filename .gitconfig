@@ -3,7 +3,7 @@
 	name = Lakshmanshankar
 [core]
     pager = delta
-	editor = nvim
+	  editor = nvim
 
 [interactive]
     diffFilter = delta --color-only
@@ -13,7 +13,10 @@
     light = false   
 
 [merge]
-    conflictstyle = diff3
+  conflictstyle = diff3
+
+[rebase]
+	updateRefs = true
 
 [diff]
     colorMoved = default

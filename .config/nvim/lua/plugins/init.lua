@@ -9,19 +9,33 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
+      -- Set up capabilities with offset encoding before requiring configs
+      local capabilities = vim.lsp.protocol.make_client_capabilities()
+      capabilities.offsetEncoding = { "utf-16" }
+
+      -- Make capabilities available globally or pass to your config
+      vim.g.lsp_capabilities = capabilities
+
       require "configs.lspconfig"
     end,
   },
+
+  -- MASON
   {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
         "lua-language-server",
         "stylua",
-        "prettierd",
-        "vtsls",
         "gopls",
         "biome",
+        "vtsls",
+        "css-lsp",
+        "html-lsp",
+        "shfmt",
+        "vtsls",
+        "prettierd",
+        "tailwind-language-server",
       },
     },
   },
@@ -29,29 +43,46 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       ensure_installed = {
-        "vim",
         "lua",
-        "vimdoc",
-        "html",
-        "css",
+        "go",
+        "vim",
+        "astro",
+        "markdown",
+        "markdown_inline",
+        "json",
+        "yaml",
+        "toml",
+        "tsx",
         "typescript",
         "javascript",
-        "tsx",
-        "go",
+        "jsx",
+        "html",
+        "css",
+      },
+    },
+    -- JSX Plugins
+    {
+      "windwp/nvim-ts-autotag",
+      ft = {
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "html",
+      },
+      config = function()
+        require("nvim-ts-autotag").setup()
+      end,
+    },
+
+    {
+      "JoosepAlviste/nvim-ts-context-commentstring",
+      ft = {
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
       },
     },
   },
-
-  -- test new blink
-  -- { import = "nvchad.blink.lazyspec" },
-
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
 }

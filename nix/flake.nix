@@ -1,7 +1,5 @@
-
 {
   description = "Lakshman's CLI + Dev Environment";
-
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
   };
@@ -11,16 +9,22 @@
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; };
 
-      myPkgs = pkgs // {
-        go = pkgs.go_1_25;         
-        nodejs_22 = pkgs.nodejs_22;
-        neovim = pkgs.neovim_0_11;
+      myPkgs = {
+        go = pkgs.go_1_25;
+        nodejs = pkgs.nodejs_22;  
+        neovim = pkgs.neovim;    
       };
 
-      commonPkgs = with myPkgs; [
+      commonPkgs = with pkgs; [
+        # Your custom packages
+        myPkgs.go
+        myPkgs.nodejs
+        myPkgs.neovim
+        
+        # Other packages
         delta zsh zsh-autosuggestions zsh-syntax-highlighting
         oh-my-zsh zsh-autocomplete fzf zoxide ripgrep fd bat btop jq htop dust
-        eza tldr tmux git lazygit kitty starship xclip pnpm
+        eza tldr tmux git lazygit kitty starship xclip pnpm hey
       ];
     in
     {

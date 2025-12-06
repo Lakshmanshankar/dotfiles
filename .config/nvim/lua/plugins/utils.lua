@@ -31,7 +31,7 @@ return {
     opts = { open_cmd = "noswapfile vnew" },
     -- stylua: ignore
         keys = {
-            { "<leader>sr", function() require("spectre").open() end, desc = "Replace in files (Spectre)" },
+            { "<leader>rr", function() require("spectre").open() end, desc = "Replace in files (Spectre)" },
         },
   },
   {
@@ -60,8 +60,7 @@ return {
           })
           :find()
       end
-
-      vim.keymap.set("n", "<leader>hh", function()
+      vim.keymap.set("n", "<leader>at", function()
         toggle_telescope(harpoon:list())
       end, { desc = "Open harpoon window" })
     end,
@@ -74,26 +73,15 @@ return {
         desc = "harpoon add file",
       },
       {
-        "<leader>ao",
-        function()
-          require("harpoon"):list():next()
-        end,
-        desc = "harpoon add file",
-      },
-      {
-        "<leader>ai",
-        function()
-          require("harpoon"):list():prev()
-        end,
-        desc = "harpoon add file",
-      },
-      {
         "<leader>ah",
         function()
           local harpoon = require "harpoon"
           harpoon.ui:toggle_quick_menu(harpoon:list())
         end,
         desc = "harpoon quick menu",
+      },
+      {
+        "<leader>at",
       },
     },
   },
@@ -109,39 +97,13 @@ return {
       require("refactoring").setup()
     end,
   },
-
-  -- Lazygit rarely use so but good one. 
-  -- {
-  --   "kdheepak/lazygit.nvim",
-  --   dependencies = {
-  --     "nvim-telescope/telescope.nvim",
-  --     "nvim-lua/plenary.nvim",
-  --   },
-  --   cmd = { "LazyGit" },
-  --   keys = { { "<leader>gg", "<cmd>LazyGit<cr>", desc = "LazyGit" } },
-  --   config = function()
-  --     require("telescope").load_extension "lazygit"
-  --   end,
-  -- },
-
   {
-    "windwp/nvim-ts-autotag",
-    ft = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+    "ziontee113/icon-picker.nvim",
+    cmd = { "IconPickerYank", "IconPickerNormal", "IconPickerInsert" },
     config = function()
-      require("nvim-ts-autotag").setup()
-    end,
-  },
-
-  { 
-  	"ziontee113/icon-picker.nvim",
-  	cmd = { "IconPickerYank", "IconPickerNormal", "IconPickerInsert" },
-  	config = function()
-  		require("icon-picker").setup { disable_legacy_commands = true }
-
-  		local opts = { noremap = true, silent = true }
-
-  		vim.keymap.set("n", "<leader>ki", "<cmd>IconPickerNormal<cr>", opts)
-  		vim.keymap.set("n", "<leader><leader>y", "<cmd>IconPickerYank<cr>", opts) 
+      require("icon-picker").setup { disable_legacy_commands = true }
+      local opts = { noremap = true, silent = true }
+      vim.keymap.set("n", "<leader>hi", "<cmd>IconPickerYank<cr>", opts)
     end,
   },
 }

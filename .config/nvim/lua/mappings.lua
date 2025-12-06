@@ -11,8 +11,9 @@ map("i", "jk", "<ESC>")
 map("n", "<leader>|", "<cmd>vsp<CR>", { desc = "vertical split" })
 map("n", "<leader>-", "<cmd>sp<CR>", { desc = "horizontal split" })
 map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "nvimtree focus window" })
+
 map("n", "<leader>ck", "<cmd>TSContextToggle<CR>", { desc = "Toggle Treesitter context" })
-map("n", "<leader>cf", function()
+map("n", "<leader>fm", function()
   require("conform").format { lsp_fallback = true }
 end, { desc = "format files" })
 
@@ -20,9 +21,8 @@ end, { desc = "format files" })
 -- map("n", "<leader>fr", "<cmd>Telescope lsp_references<CR>", { desc = "telescope LSP References" })
 -- map("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", { desc = "telescope find files" })
 map("n", "<leader>ud", "<cmd>lua vim.diagnostic.disable()<CR>", { desc = "disable diagnostic" })
-map("n", "<leader>ua", "<cmd>lua vim.diagnostic.enable()<CR>", { desc = "disable diagnostic" })
+map("n", "<leader>ue", "<cmd>lua vim.diagnostic.enable()<CR>", { desc = "disable diagnostic" })
 map("n", "<leader>cha", "<cmd>TSToggle highlight<CR>", { desc = "enable code highlight" })
-map("n", "<leader>hi", "<cmd>IconPickerYank<CR>", { desc = "Icon Picker Yank" })
 
 -- TELESCOPE GIT
 map("n", "<leader>gc", "<cmd>Telescope git_commits<CR>", { desc = "Git commits" })
@@ -31,7 +31,6 @@ map("n", "<leader>gb", function()
   package.loaded.gitsigns.blame_line()
 end, { desc = "Git blame_line" })
 
-map("n", "<leader>st", "<cmd>TodoTelescope <CR>", { desc = "Project Todo/Info" })
 map("n", "<leader>tw", "<cmd>set wrap!<CR>", { desc = "Toggle wrap" })
 
 map("n", "<C-d>", "<C-d>zz<CR>", { silent = true, noremap = true })
