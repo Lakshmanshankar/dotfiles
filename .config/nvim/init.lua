@@ -1,6 +1,5 @@
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/base46/"
 vim.g.mapleader = " "
-
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
@@ -55,3 +54,6 @@ vim.opt.fillchars = { fold = " " }
 vim.opt.foldmethod = "indent"
 vim.opt.foldenable = false
 vim.opt.foldlevel = 99
+
+vim.opt.mouse = "a"
+vim.opt.mousemodel = "extend"
