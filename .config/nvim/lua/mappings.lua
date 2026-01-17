@@ -31,6 +31,8 @@ map("n", "<leader>gb", function()
   package.loaded.gitsigns.blame_line()
 end, { desc = "Git blame_line" })
 
+map('n', '<leader>tr', require('telescope.builtin').resume, { desc = 'Resume last Telescope picker' })   
+
 map("n", "<leader>tw", "<cmd>set wrap!<CR>", { desc = "Toggle wrap" })
 
 map("n", "<C-d>", "<C-d>zz<CR>", { silent = true, noremap = true })
