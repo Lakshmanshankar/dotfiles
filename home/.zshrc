@@ -104,6 +104,20 @@ source "$HOME/.zshrc.d/.funcs.zsh"
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+# History settings
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
+# Remove duplicates
+setopt HIST_IGNORE_ALL_DUPS    # Don't record duplicate entries
+setopt HIST_FIND_NO_DUPS       # Don't display duplicates when searching
+setopt HIST_SAVE_NO_DUPS       # Don't save duplicates
+
+# Optional: Share history between sessions
+setopt SHARE_HISTORY           # Share history between all sessions
+setopt APPEND_HISTORY          # Append to history file
+setopt INC_APPEND_HISTORY      # Write to history file immediately
 
 # pnpm
 export PNPM_HOME="/home/lakshman/.local/share/pnpm"
