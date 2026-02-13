@@ -19,7 +19,7 @@ chmod +x ./nix/bootstrap.sh
 2. Install GNU stow
 
 ```
-stow .
+stow home
 ```
 
 
