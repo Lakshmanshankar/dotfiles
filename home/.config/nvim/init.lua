@@ -35,7 +35,7 @@ vim.schedule(function()
   require "mappings"
 end)
 
-vim.api.nvim_set_hl(0, "TelescopeBorder", { fg = "#393552" })
+-- vim.api.nvim_set_hl(0, "TelescopeBorder", { fg = "#393552" })
 
 local vim = vim
 -- local opt = vim.opt

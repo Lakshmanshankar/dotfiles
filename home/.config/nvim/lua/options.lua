@@ -56,8 +56,8 @@ vim.o.smartcase = true
 -- vim.opt.timeoutlen = 300
 
 -- Set colorcolumn
-vim.opt.colorcolumn = "100"
-vim.opt.textwidth = 100
+-- vim.opt.colorcolumn = "100"
+-- vim.opt.textwidth = 100
 
 -- Set completeopt to have a better completion experience
 vim.opt.completeopt = "menuone,noselect"

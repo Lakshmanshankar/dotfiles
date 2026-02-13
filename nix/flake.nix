@@ -22,7 +22,7 @@
         myPkgs.neovim
         
         # Other packages
-        delta zsh zsh-autosuggestions zsh-syntax-highlighting
+        delta zsh zsh-autosuggestions zsh-syntax-highlighting jnv
         oh-my-zsh zsh-autocomplete fzf zoxide ripgrep fd bat btop jq htop dust
         eza tldr tmux git lazygit kitty starship xclip pnpm hey
       ];
