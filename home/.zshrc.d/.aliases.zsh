@@ -20,6 +20,7 @@ alias bat='bat --theme="Catppuccin Mocha"'
 alias fed='fzf --preview "bat --style=numbers --color=always --line-range=:500 {}" --bind "enter:execute(nvim {})"'
 alias alias-help="cat $HOME/.zshrc.d/.aliases.zsh | fzf"
 
+# Laptop keyboard issues:
 disable_builtin_keyboard() {
     echo 1 | sudo tee /sys/class/input/event4/device/inhibited > /dev/null
     echo "Built-in keyboard disabled"

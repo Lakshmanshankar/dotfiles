@@ -49,7 +49,8 @@
         btop      # system monitor
         tldr      # quick manpages
         jq        # JSON processor
-        jnv       # interactive JSON
+        jnv       # interactive Jq
+        wl-clipboard # we love clipboard
       ];
 
       # ── Version control 
