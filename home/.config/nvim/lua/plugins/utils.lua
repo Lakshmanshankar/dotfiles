@@ -18,9 +18,6 @@ return {
       "TextCaseOpenTelescopeLSPChange",
       "TextCaseStartReplacingCommand",
     },
-    -- If you want to use the interactive feature of the `Subs` command right away, text-case.nvim
-    -- has to be loaded on startup. Otherwise, the interactive feature of the `Subs` will only be
-    -- available after the first executing of it or after a keymap of text-case.nvim has been used.
     lazy = false,
   },
 
@@ -103,7 +100,7 @@ return {
     config = function()
       require("icon-picker").setup { disable_legacy_commands = true }
       local opts = { noremap = true, silent = true }
-      vim.keymap.set("n", "<leader>hi", "<cmd>IconPickerYank<cr>", opts)
+      vim.keymap.set("n", "<leader>yi", "<cmd>IconPickerYank<cr>", opts)
     end,
   },
 }

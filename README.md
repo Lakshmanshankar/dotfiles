@@ -18,7 +18,6 @@ sh <(curl -L https://nixos.org/nix/install) --daemon
 ```
 chmod +x ./nix/bootstrap.sh
 ./nix/bootstrap.sh
-
 ```
 
 2. Install GNU stow

@@ -4,6 +4,7 @@ alias c="clear"
 alias e="exit"
 alias vi="nvim"
 alias ls="lsd"
+alias cx="codex"
 
 alias lg="lazygit"
 alias fd="fdfind"

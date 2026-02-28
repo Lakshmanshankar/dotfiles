@@ -2,3 +2,29 @@ git:
   paging:
     colorArg: always
     pager: delta --dark --paging=never
+
+gui:
+  theme:
+    activeBorderColor:
+      - '#946ff7'
+      - bold
+    inactiveBorderColor:
+      - '#33333f'
+    optionsTextColor:
+      - '#73a9ff'
+    selectedLineBgColor:
+      - '#33333f'
+    selectedRangeBgColor:
+      - '#33333f'
+    cherryPickedCommitBgColor:
+      - '#62c6da'
+    cherryPickedCommitFgColor:
+      - '#101017'
+    unstagedChangesColor:
+      - '#ff568e'
+    defaultFgColor:
+      - '#bdc3df'
+    searchingActiveBorderColor:
+      - '#efff73'
+
+  nerdFontsVersion: "3"

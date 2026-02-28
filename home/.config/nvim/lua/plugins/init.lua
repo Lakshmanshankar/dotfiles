@@ -11,7 +11,7 @@ return {
     config = function()
       -- Set up capabilities with offset encoding before requiring configs
       local capabilities = vim.lsp.protocol.make_client_capabilities()
-      capabilities.offsetEncoding = { "utf-16" }
+      capabilities.offsetEncoding = { "utf-8" }
 
       -- Make capabilities available globally or pass to your config
       vim.g.lsp_capabilities = capabilities

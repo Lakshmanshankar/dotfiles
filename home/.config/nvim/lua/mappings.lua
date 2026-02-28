@@ -18,8 +18,6 @@ map("n", "<leader>fm", function()
 end, { desc = "format files" })
 
 -- TELESCOPE 🔭
--- map("n", "<leader>fr", "<cmd>Telescope lsp_references<CR>", { desc = "telescope LSP References" })
--- map("n", "<leader><leader>", "<cmd>Telescope find_files<cr>", { desc = "telescope find files" })
 map("n", "<leader>ud", "<cmd>lua vim.diagnostic.disable()<CR>", { desc = "disable diagnostic" })
 map("n", "<leader>ue", "<cmd>lua vim.diagnostic.enable()<CR>", { desc = "disable diagnostic" })
 map("n", "<leader>cha", "<cmd>TSToggle highlight<CR>", { desc = "enable code highlight" })
@@ -31,7 +29,7 @@ map("n", "<leader>gb", function()
   package.loaded.gitsigns.blame_line()
 end, { desc = "Git blame_line" })
 
-map('n', '<leader>tr', require('telescope.builtin').resume, { desc = 'Resume last Telescope picker' })   
+map('n', '<C-t>', require('telescope.builtin').resume, { desc = 'Resume last Telescope picker' })   
 
 map("n", "<leader>tw", "<cmd>set wrap!<CR>", { desc = "Toggle wrap" })
 

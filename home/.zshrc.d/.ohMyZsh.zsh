@@ -5,7 +5,6 @@ source $ZSH/oh-my-zsh.sh
 
 HYPHEN_INSENSITIVE="true"
 
-# Source nix-installed Zsh plugins
 [[ -f "$HOME/.nix-profile/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh" ]] &&
     source "$HOME/.nix-profile/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
 

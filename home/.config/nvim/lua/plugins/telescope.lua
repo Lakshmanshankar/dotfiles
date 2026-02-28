@@ -69,8 +69,8 @@ return {
     vim.keymap.set("n", "<leader><leader>", menufacture.find_files, { desc = "Find Files" })
 
     -- Search word in files with menufacture (Ctrl+L for filter menu)
-    vim.keymap.set("n", "<leader>fg", menufacture.live_grep, { desc = "[F]ind by [G]rep (Ctrl+L for filters)" })
-    vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
+    vim.keymap.set("n", "<leader>sw", menufacture.live_grep, { desc = "[F]ind by [G]rep (Ctrl+L for filters)" })
+    -- vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
 
     -- LSP: Go to references
     vim.keymap.set("n", "<leader>fr", builtin.lsp_references, { desc = "[F]ind [R]eferences" })
