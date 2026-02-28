@@ -1,7 +1,5 @@
-# Load oh my zsh first
+# Load oh my zsh
 source "$HOME/.zshrc.d/.ohMyZsh.zsh"
-
-
 source "$HOME/.zshrc.d/.aliases.zsh"
 source "$HOME/.zshrc.d/.sources.zsh"
 source "$HOME/.zshrc.d/.funcs.zsh"
@@ -21,7 +19,6 @@ HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
 
-# Remove duplicates
 setopt HIST_IGNORE_ALL_DUPS    # Don't record duplicate entries
 setopt HIST_FIND_NO_DUPS       # Don't display duplicates when searching
 setopt HIST_SAVE_NO_DUPS       # Don't save duplicates
