@@ -31,6 +31,14 @@ setopt INC_APPEND_HISTORY      # Write to history file immediately
 # bun completions
 # [ -s "/home/lakshman/.bun/_bun" ] && source "/home/lakshman/.bun/_bun"
 
+
+# pnpm
+export PNPM_HOME="/home/lakshman/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
