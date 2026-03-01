@@ -100,7 +100,7 @@ return {
     config = function()
       require("icon-picker").setup { disable_legacy_commands = true }
       local opts = { noremap = true, silent = true }
-      vim.keymap.set("n", "<leader>yi", "<cmd>IconPickerYank<cr>", opts)
+      vim.keymap.set("n", "<leader>mm", "<cmd>IconPickerYank<cr>", opts)
     end,
   },
 }

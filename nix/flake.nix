@@ -39,25 +39,25 @@
 
       # ── CLI utilities
       cliPkgs = with pkgs; [
-        fzf       # fuzzy finder
-        zoxide    # smart cd
-        ripgrep   # fast grep
-        fd        # fast find
-        bat       # cat with wings
-        lsd       # modern ls
-        dust      # disk usage
-        btop      # system monitor
-        tldr      # quick manpages
-        jq        # JSON processor
-        jnv       # interactive Jq
-        wl-clipboard # we love clipboard
+        fzf           # fuzzy finder
+        zoxide        # smart cd
+        ripgrep       # fast grep
+        fd            # fast find
+        bat           # cat with wings
+        lsd           # modern ls
+        dust          # disk usage
+        btop          # system monitor
+        tldr          # quick manpages
+        jq            # JSON processor
+        jnv           # interactive Jq
+        wl-clipboard  # we love clipboard
       ];
 
       # ── Version control 
       gitPkgs = with pkgs; [
         git
         lazygit
-        delta     # git diff pager
+        delta         # git diff pager
       ];
 
       commonPkgs = langPkgs ++ editorPkgs ++ shellPkgs ++ termPkgs ++ cliPkgs ++ gitPkgs;

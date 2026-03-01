@@ -63,16 +63,23 @@ return {
 
     local builtin = require "telescope.builtin"
     local menufacture = require("telescope").extensions.menufacture
+    -- Built-in Telescope (full fzf exact match support)
+    vim.keymap.set("n", "<leader>ff", builtin.find_files, {
+      desc = "[F]ind [F]iles",
+    })
 
-    -- Search files with menufacture (Ctrl+L for filter menu)
-    vim.keymap.set("n", "<leader>ff", menufacture.find_files, { desc = "[F]ind [F]iles (Ctrl+L for filters)" })
-    vim.keymap.set("n", "<leader><leader>", menufacture.find_files, { desc = "Find Files" })
+    vim.keymap.set("n", "<leader>fw", builtin.live_grep, {
+      desc = "[F]ind [W]ord / grep",
+    })
 
-    -- Search word in files with menufacture (Ctrl+L for filter menu)
-    vim.keymap.set("n", "<leader>sw", menufacture.live_grep, { desc = "[F]ind by [G]rep (Ctrl+L for filters)" })
-    -- vim.keymap.set("n", "<leader>sw", builtin.grep_string, { desc = "[S]earch current [W]ord" })
+    -- Menufacture versions (Ctrl+L filter menu)
+    vim.keymap.set("n", "<leader><leader>", menufacture.find_files, {
+      desc = "Find Files (menufacture menu)",
+    })
 
-    -- LSP: Go to references
+    vim.keymap.set("n", "<leader>sw", menufacture.live_grep, {
+      desc = "[S]earch [W]ord (menufacture menu)",
+    }) -- LSP: Go to references
     vim.keymap.set("n", "<leader>fr", builtin.lsp_references, { desc = "[F]ind [R]eferences" })
     vim.keymap.set("n", "gr", builtin.lsp_references, { desc = "Go to References" })
 
