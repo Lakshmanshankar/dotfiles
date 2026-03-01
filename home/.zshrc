@@ -4,6 +4,14 @@ source "$HOME/.zshrc.d/.aliases.zsh"
 source "$HOME/.zshrc.d/.sources.zsh"
 source "$HOME/.zshrc.d/.funcs.zsh"
 
+# Set the GPG_TTY to be the same as the TTY, either via the env var
+# or via the tty command.
+if [ -n "$TTY" ]; then
+  export GPG_TTY=$(tty)
+else
+  export GPG_TTY="$TTY"
+fi
+
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'

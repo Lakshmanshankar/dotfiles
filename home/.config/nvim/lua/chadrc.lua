@@ -4,14 +4,8 @@
 
 ---@type ChadrcConfig
 local M = {}
-
 M.base46 = {
   theme = "catppuccin",
-  statusline = {
-    theme = "default", -- default/vscode/vscode_colored/minimal
-    separator_style = "block",
-    overriden_modules = nil,
-  },
   transparency = true,
   hl_override = {
     Comment = { italic = true },
@@ -19,14 +13,18 @@ M.base46 = {
     TelescopeBorder = {
       fg = "#2a273f",
     },
-  },
+  }
 }
 
 -- M.nvdash = { load_on_startup = true }
--- M.ui = {
---       tabufline = {
---          lazyload = false
---      }
--- }
+M.ui = {
+  tabufline = {
+    lazyload = false,
+  },
+  statusline = {
+    theme = "vscode_colored",
+    separator_style = "block",
+  }
+}
 
 return M
