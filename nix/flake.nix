@@ -57,6 +57,7 @@
       gitPkgs = with pkgs; [
         git
         lazygit
+        gradia
         delta         # git diff pager
       ];
 
