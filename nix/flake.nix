@@ -55,6 +55,7 @@
 
       # ── Version control 
       gitPkgs = with pkgs; [
+        gh
         git
         lazygit
         gradia
