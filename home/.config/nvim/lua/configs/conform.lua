@@ -6,6 +6,7 @@ local options = {
     typescript = { "biome" },
     json = { "biome" },
     typescriptreact = { "biome" },
+    python = { "ruff" },
   },
 
   format_on_save = {
