@@ -1,0 +1,10 @@
+{
+  "color_scheme": "Catppuccin Mocha.sublime-color-scheme",
+  "font_face": "JetBrainsMono Nerd Font",
+  "font_size": 15,
+  "gtk_client_side_decorations": false,
+  "themed_title_bar": true,
+  "ignored_packages": ["Vintage"],
+  "theme": "Adaptive.sublime-theme",
+  "index_files": true
+}

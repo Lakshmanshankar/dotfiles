@@ -1,0 +1,22 @@
+[
+	{
+		"keys":["ctrl+j","j"],
+		"command":"set_setting",
+		"args":{
+			"setting":"syntax",
+			"value":"Packages/JSON/JSON.sublime-syntax"
+		}
+	},
+	{
+		"keys":["ctrl+j","m"],
+		"command":"set_setting",
+		"args":{
+			"setting":"syntax",
+			"value":"Packages/Markdown/Markdown.sublime-syntax"
+		}
+	},
+	{
+		"keys":["alt+b"],
+		"command":"toggle_side_bar",
+	}
+]

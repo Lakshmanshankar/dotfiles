@@ -1,6 +1,7 @@
 [user]
 	email = lakshmanshankarc@gmail.com
 	name = Lakshmanshankar
+	signingkey = 6CE18768D6313AE41A8C960FD9341730E3EB6A10
 [core]
     pager = delta
 	  editor = nvim
