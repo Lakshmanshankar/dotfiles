@@ -1,16 +1,15 @@
 # Dotfiles
 
 My personal dotfiles for Ubuntu 22.04, managed using [GNU Stow](https://www.gnu.org/software/stow/) and [Nix](https://nixos.org/).
-
 ## Setup
 
 ### 1. Install prerequisites
 
-Install Git and GNU Stow using APT:
+Install Git, GNU Stow, curl, and Zsh:
 
 ```sh
 sudo apt update
-sudo apt install -y git stow curl
+sudo apt install -y git stow curl zsh
 ```
 
 ### 2. Clone the repository
@@ -20,33 +19,39 @@ git clone https://github.com/lakshmanshankar/dotfiles.git
 cd dotfiles
 ```
 
-### 3. Install Nix
+### 3. Set Zsh as the default shell
 
-Install Nix using the official installation script:
+```sh
+chsh -s "$(which zsh)"
+```
+
+Log out and log back in for the change to take effect.
+
+Verify the default shell:
+
+```sh
+echo "$SHELL"
+```
+
+### 4. Install Nix
 
 ```sh
 sh <(curl -L https://nixos.org/nix/install) --daemon
 ```
 
-After installation, restart your terminal or load the appropriate shell configuration so that the Nix commands are available.
+Restart your terminal or load the appropriate shell configuration after installation.
 
-### 4. Install packages
-
-Install the default package set defined in the repository's Nix flake:
+### 5. Install packages
 
 ```sh
 nix profile install .#default
 ```
 
-### 5. Apply dotfiles
-
-Use GNU Stow to create symlinks for the configurations in the `home` directory:
+### 6. Apply dotfiles
 
 ```sh
 stow home
 ```
-
-Review the symlinks and resolve any conflicts with existing configuration files before applying the setup.
 
 ## Nix package management
 
