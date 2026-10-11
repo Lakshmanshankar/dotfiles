@@ -27,6 +27,12 @@ chsh -s "$(which zsh)"
 
 Log out and log back in for the change to take effect.
 
+3.1 Install Oh My Zsh
+
+Install Oh My Zsh using its official installer:
+```
+RUNZSH=no CHSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
 Verify the default shell:
 
 ```sh
