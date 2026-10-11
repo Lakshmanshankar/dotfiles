@@ -12,8 +12,6 @@ else
   export GPG_TTY="$TTY"
 fi
 
-
-
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -52,7 +50,6 @@ esac
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-
 
 # Added by Antigravity CLI installer
 export PATH="/home/lakshman/.local/bin:$PATH"

@@ -22,17 +22,15 @@
 
       # ── Shell & prompt
       shellPkgs = with pkgs; [
-        zsh
+        # zsh - Installed using native package manager
         zsh-autosuggestions
         zsh-syntax-highlighting
         zsh-autocomplete
-        oh-my-zsh
         starship
       ];
 
       # ── Terminal
       termPkgs = with pkgs; [
-        kitty
         tmux
         xclip
       ];
